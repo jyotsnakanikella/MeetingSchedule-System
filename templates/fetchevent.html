@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>FetchDate</title>
+{% endblock %}
+
+{% block body %}
+<h1>Fetch Events</h1>
+<hr>
+<h2>Fetch date between two dates:</h2>
+<form action='/fetch' method='POST'>
+    StartDate:<input type="text" name="startdate" id="startdate">
+    <br>
+    EndDate:<input type="text" name="enddate" id="enddate">
+    <br>
+    <input type="submit" value="Post">
+</form>
+<hr>
+<p>{{datestring}}</p>
+{% endblock %}
